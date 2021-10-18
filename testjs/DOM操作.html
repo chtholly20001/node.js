@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+<style>
+    div{
+        width:200px;
+        height:200px;
+        background-color:pink;
+    }
+</style>
+</head>
+<body>
+    <div id="odiv"></div>
+    <script>
+        var oDom = document.getElementById("odiv");
+        oDom.onclick = function () {
+            setTimeout(() => {
+                this.style.width = "500px"
+            }, 1000)
+        }
+    </script>
+</body>
+</html>
