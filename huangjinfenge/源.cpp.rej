@@ -1,0 +1,35 @@
+diff a/huangjinfenge/源.cpp b/huangjinfenge/源.cpp	(rejected hunks)
+@@ -0,0 +1,33 @@
++#include<iostream>
++using namespace std;
++double* func(double a, double b, double e, double(*f)(double x)) {
++	double x1 = a + 0.382 * (b - a);
++	double y1 = f(x1);
++	double x2 = a + 0.618 * (b - a);
++	double y2 = f(x2);
++	int i=0;
++	while (b - a > e) {
++		i++;
++		if (y1 < y2) {
++			b = x2; x2 = x1; y2 = y1;
++			x1 = a + 0.382 * (b - a);
++			y1 = f(x1);
++		}
++		else {
++			a = x1; x1 = x2; y1 = y2;
++			x2 = a + 0.618 * (b - a);
++			y2 = f(x2);
++		}
++	}
++	double aa[3] = { i,0.5 * (a + b) ,f(0.5 * (a + b)) };
++	return aa;
++}
++double f(double x) {
++	return x * x+5;
++}
++int main(){
++	double a = -10,b = 5,e=0.01;
++	double* n = func(a, b, e, f);
++	cout <<"��ֵ��Ϊ"<< n[1]<<"��ֵΪ"<< n[2] <<"��������Ϊ"<<n[0]<< endl;
++	return 0;
++}

@@ -1,0 +1,6 @@
+﻿  源.cpp
+E:\git\testgit\huangjinfenge\源.cpp(22,19): warning C4838: 从“int”转换到“double”需要收缩转换
+E:\git\testgit\huangjinfenge\源.cpp(23): warning C4172: 返回局部变量或临时变量的地址: aa
+E:\git\testgit\huangjinfenge\源.cpp(41): warning C4172: 返回局部变量或临时变量的地址: n
+E:\git\testgit\huangjinfenge\源.cpp(45): warning C4172: 返回局部变量或临时变量的地址: n
+  huangjinfenge.vcxproj -> E:\git\testgit\huangjinfenge\Debug\huangjinfenge.exe
